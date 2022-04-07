@@ -9,17 +9,17 @@ function generatePassword() {
 
 //prompt user for password criteria
 
-// length: 8<128
+// length: 8<var<128
 var passLength = prompt("Enter the number of desired characters (8-128).", "8")
   if (passLength == null || passLength < 8 || passLength > 128) {
     //if less than 8 or cancel, generator aborted and loops
-    alert("Password generator aborted.");
+    alert("Password generator aborted.\nPlease try again.");
   } else {
     //onto next function for lowercase, and then so on
-    var confirmLowercase = confirm("Click OK to confirm you would like lowercase characters.");
-    var confirmUppercase = confirm("Click OK to confirm you would like uppercase characters.");
-    var confirmNumber = confirm("Click OK to confirm you would like numeric characters.");
-    var confirmSymbol = confirm("Click OK to confirm you would like symbol characters.");
+    var confirmLowercase = confirm("Click OK to confirm LOWERCASE character inclusion.");
+    var confirmUppercase = confirm("Click OK to confirm UPPERCASE character inclusion.");
+    var confirmNumber = confirm("Click OK to confirm NUMERIC character inclusion.");
+    var confirmSymbol = confirm("Click OK to confirm SYMBOL character inclusion.");
   }
 
 
